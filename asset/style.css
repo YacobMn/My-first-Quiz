@@ -1,0 +1,36 @@
+
+.question-box {
+    background-color: lightgrey;
+    width: 300px;
+    border: 15px solid rgb(96, 80, 240);
+    padding: 50px;
+    margin: 20px;
+}
+
+
+.time-counter {
+    background-color: lightgrey;
+    width: 100px;
+    height: 10px;
+    border: 15px solid rgb(56, 57, 83);
+    padding: 50px;
+    margin: 20px;
+
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.board-win {
+    background-color:beige;
+    width: 50px;
+    height: 50px;
+    border: 15px solid rgba(90, 95, 198, 0.437);
+    padding: 50px;
+    margin: 20px;
+}
+body {
+    background-color: rgb(110, 103, 96);
+    
+}
