@@ -3,7 +3,12 @@ var startBtn = document.querySelector(".start-btn");
 var questionEl = document.querySelector(".question");
 var choicesContainer= document.querySelector(".choicesContainer");
 var submitEl= document.querySelector(".submit");
+var hearContainer = document.querySelector(".title-1");
+var quizBox = document.querySelector(".question-box");
+var lastContiner = document.querySelector("#last-container");
 
+quizBox.style.display="none"
+lastContiner.style.display="none"
 // startBtn done
 // questionEl
 // submitEl
@@ -53,28 +58,25 @@ function timeCounter(){
     timeEl = document.querySelector('#time');
     timeEl.textContent = timeSec;
 
-    setInterval = setInterval(function(){
+    timeInterval = setInterval(function(){
         timeSec--;
         timeEl.textContent = timeSec;
-        if (timeSec <= 0) {
+        if (timeSec === 0) {
             clearInterval(timeInterval);
         }
+        
     },1000) 
 
 }
 
-   
-
-
-
 
 /// loop to take the questions
 
-/// function for correct answer
+/// function for correct answer[ help on this one ]
 function correctAnswer(){
     console.log("hellooooo")
 }
-
+///////////////////////////////
 function renderQuestion(){
     var currentQuestion = allQuestions[currentQuestionIndex]
     var questionText = currentQuestion.question
@@ -97,6 +99,8 @@ function renderQuestion(){
 /// the time start button must be run once(once: True)
 
 startBtn.addEventListener("click", function(){
+    hearContainer.style.display="none"
+    quizBox.style.display="block"
 timeCounter();
 renderQuestion();
 
