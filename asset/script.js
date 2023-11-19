@@ -108,9 +108,12 @@ renderQuestion();
 /// add event listner for choice button
 /// the time start button must be run once(once: True)
 
-choicesContainer.addEventListener("click", function(){
+choicesContainer.addEventListener("click", function(event){
     currentQuestionIndex++
     renderQuestion();
+    //add deligate event listener. which one is write and wrong. 
+    var target = (correctAnswer);
+    console.log('corret')
     // find the nearest button and see if it is right or wrong
 },)
 /// event listner for submitBtn 
